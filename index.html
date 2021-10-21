@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <title>Spotify Web Playback SDK Quick Start</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">       
 </head>
-<body>
-    <h1>new change</h1>
+<b<nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"></a>
+      
+      <i class="medium material-icons">reorder</i>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html"><i class="material-icons left">search</i>Link with Left Icon</a></li>
+        <li><a href="badges.html"><i class="material-icons right">view_module</i>Link with Right Icon</a></li>
+      </ul>
+    </div>
+  </nav>
     <h1>Spotify Web Playback SDK Quick Start</h1>
     <button id="togglePlay">Toggle Play</button>
+ 
 
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
     <script>
         window.onSpotifyWebPlaybackSDKReady = () => {
-            const token = 'BQBkFer5WyoB-2lI6XCIuytZ_vcxJE07hg6_2A01FlYnQeUhQGeg8V2vm_yaDvxpnaP3q5huXyLpowAjkvJ-UbdlbNJPBpPg6kX5XqSzWA4sZBFj1F1RV5pgTLTZi8pPxIURb77V76eE811r54NFro3m0mTmZo9redQ';
+            const token = '[My access token]';
             const player = new Spotify.Player({
                 name: 'Web Playback SDK Quick Start Player',
                 getOAuthToken: cb => { cb(token); },
@@ -27,7 +45,6 @@
             player.addListener('not_ready', ({ device_id }) => {
                 console.log('Device ID has gone offline', device_id);
             });
-
             player.addListener('initialization_error', ({ message }) => {
                 console.error(message);
             });
@@ -47,5 +64,14 @@
             player.connect();
         }
     </script>
+<script src="script.js"></script>
+
 </body>
+<div class="collection">
+    <a href="#!" class="collection-item">Alvin</a>
+    <a href="#!" class="collection-item active">Alvin</a>
+    <a href="#!" class="collection-item">Alvin</a>
+    <a href="#!" class="collection-item">Alvin</a>
+  </div>
+
 </html>
