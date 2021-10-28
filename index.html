@@ -1,56 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< Updated upstream
-    <title>Spotify Web Playback SDK Quick Start</title>
-</head>
-<body>
-    <h1>new change</h1>
-    <h1>Spotify Web Playback SDK Quick Start</h1>
-    <button id="togglePlay">Toggle Play</button>
-
-    <script src="https://sdk.scdn.co/spotify-player.js"></script>
-    <script>
-        window.onSpotifyWebPlaybackSDKReady = () => {
-            const token = 'BQBkFer5WyoB-2lI6XCIuytZ_vcxJE07hg6_2A01FlYnQeUhQGeg8V2vm_yaDvxpnaP3q5huXyLpowAjkvJ-UbdlbNJPBpPg6kX5XqSzWA4sZBFj1F1RV5pgTLTZi8pPxIURb77V76eE811r54NFro3m0mTmZo9redQ';
-            const player = new Spotify.Player({
-                name: 'Web Playback SDK Quick Start Player',
-                getOAuthToken: cb => { cb(token); },
-                volume: 0.5
-            });
-
-            // Ready
-            player.addListener('ready', ({ device_id }) => {
-                console.log('Ready with Device ID', device_id);
-            });
-
-            // Not Ready
-            player.addListener('not_ready', ({ device_id }) => {
-                console.log('Device ID has gone offline', device_id);
-            });
-
-            player.addListener('initialization_error', ({ message }) => {
-                console.error(message);
-            });
-
-            player.addListener('authentication_error', ({ message }) => {
-                console.error(message);
-            });
-
-            player.addListener('account_error', ({ message }) => {
-                console.error(message);
-            });
-
-            document.getElementById('togglePlay').onclick = function() {
-              player.togglePlay();
-            };
-
-            player.connect();
-        }
-    </script>
-</body>
-</html>
-=======
      <!-- i got rid of all the javascript and stuff because i figured it would be easy enough to put it back when we decide on how we will implement the billboard api -->
     <title>Music Application Project</title>
 </head>
@@ -96,4 +46,3 @@
       </div>
 </body>
 </html>
->>>>>>> Stashed changes
