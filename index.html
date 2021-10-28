@@ -1,101 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
-    <title>Spotify Web Playback SDK Quick Start</title>
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">       
+     <!-- i got rid of all the javascript and stuff because i figured it would be easy enough to put it back when we decide on how we will implement the billboard api -->
+    <title>Music Application Project</title>
 </head>
-<b<nav>
-
-
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"></a>
-      
-      <i class="medium material-icons">reorder</i>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html"><i class="material-icons left">search</i>Link with Left Icon</a></li>
-        <li><a href="badges.html"><i class="material-icons right">view_module</i>Link with Right Icon</a></li>
-        <link rel="stylesheet" href="./style.css" />
-    </ul>
+<nav class="nav">
+    <div class="row">       
+        <ul>
+            <li><a href="#hot-hits-USA" class="navbar-item">
+           hot hits USA
+         </a>
+            </li>
+            <li><a href="#hot-country" class="navbar-item">
+           Hot country
+         </a>
+            </li>
+            <li><a href="#todays-top-hits" class="navbar-item">
+           Todays Top Hits
+         </a>
+            </li>
+        </ul>
     </div>
-  </nav>    
+</nav>
       <div  id ="bio-image">        
-  <img id="bio-image" src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80 alt="project"
-  />
+  <img id="bio-image" src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80 alt="project"/>
 </div> 
-
-    <h1>Spotify Web Playback SDK Quick Start</h1>
-   
-    <button id="togglePlay">Toggle Play</button>
+    <h1>Music Application Project</h1>
  
     <div class="row">
-        <div class="column" style="background-color:#aaa;">
+        <div id="hot-hits-USA"class="column" style="background-color:#aaa;">
           <h2>Hot Hits USA </h2>
-          <p>Some text..</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime omnis eos fuga dolores. Vero quidem modi, itaque reprehenderit nam est esse dicta, eveniet officiis dolor fuga maxime delectus deleniti quasi.</p>
           
         </div>
-        <div class="column" style="background-color:#bbb;">
+        <div id="hot-country" class="column" style="background-color:#bbb;">
           <h2>Hot Country</h2>
-          <p>Some text..</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptates alias voluptatum veniam expedita blanditiis magni a voluptatibus rem ab, quia odio sint dicta qui reprehenderit ratione possimus labore eum!</p>
         </div>
-        <div class="column" style="background-color:#ccc;">
-          <h2>Today' Top Hits<section></section></h2>
-          <p>Some text..</p>
+        <div id="todays-top-hits" class="column" style="background-color:#ccc;">
+          <h2>Today' Top Hits</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, harum, iste autem numquam est et repellat possimus sit aperiam unde ea odit eum hic quibusdam doloremque ipsam ipsa, provident quam!</p>
         </div>
       </div>
-
-    <script src="https://sdk.scdn.co/spotify-player.js"></script>
-    <script>
-        window.onSpotifyWebPlaybackSDKReady = () => {
-            const token = '[My access token]';
-            const player = new Spotify.Player({
-                name: 'Web Playback SDK Quick Start Player',
-                getOAuthToken: cb => { cb(token); },
-                volume: 0.5
-            });
-
-            // Ready
-            player.addListener('ready', ({ device_id }) => {
-                console.log('Ready with Device ID', device_id);
-            });
-
-            // Not Ready
-            player.addListener('not_ready', ({ device_id }) => {
-                console.log('Device ID has gone offline', device_id);
-            });
-            player.addListener('initialization_error', ({ message }) => {
-                console.error(message);
-            });
-
-            player.addListener('authentication_error', ({ message }) => {
-                console.error(message);
-            });
-
-            player.addListener('account_error', ({ message }) => {
-                console.error(message);
-            });
-
-            document.getElementById('togglePlay').onclick = function() {
-              player.togglePlay();
-            };
-
-            player.connect();
-        }
-    </script>
-<script src="script.js"></script>
-
 </body>
-<div class="collection">
-    <a href="#!" class="collection-item">Alvin</a>
-    <a href="#!" class="collection-item active">Alvin</a>
-    <a href="#!" class="collection-item">Alvin</a>
-    <a href="#!" class="collection-item">Alvin</a>
-  </div>
-
 </html>
