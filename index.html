@@ -4,71 +4,85 @@
 
      <!-- i got rid of all the javascript and stuff because i figured it would be easy enough to put it back when we decide on how we will implement the billboard api -->
     
-    <title>Spotify Web Playback SDK Quick Start</title>
+    <title>Music Application Project</title>
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style/style.css" />
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     
 </head>
-<nav class="navbar-wrapper">
-    <a href="#!" class="brand-logo"></a>
-    <div class="row">       
+<nav>
+    <div class="navbar-wrapper" class="row">
+        <h6>Music Application Project</h6>
+        <!-- fixed the links to the different parts of the page -->
         <ul>
-            <li><a href="#hot-hits-USA" class="navbar-item">
+            <li><a href="#hot-hits-USA">
            hot hits USA
          </a>
             </li>
-            <li><a href="#hot-country" class="navbar-item">
+            <li><a href="#hot-country" >
            Hot country
          </a>
             </li>
-            <li><a href="#todays-top-hits" class="navbar-item">
+            <li><a href="#todays-top-hits">
            Todays Top Hits
          </a>
             </li>
         </ul>
-
-
+    </div>
 </nav>
-      <div  id ="bio-image">        
-  <img id="bio-image" src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80 alt="project"/>
-</div> 
-    <h1>Music Application Project</h1>
- 
+
+<div>     
+     
+        <!-- <img id="bio-image" src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80" alt="project"/> -->
+        <img class="bio-image" id="bio-image" src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ" />
+       
+    </div>
+    
     <div class="row">
 
-        <div class="column" style="background-color:rgb(0, 0, 0);">
+        <div id="hot-hits-USA" class="column" style="background-color:rgb(0, 0, 0);">
           <h2>Hot Hits USA </h2>
-          <div  id ="hits-image">        
-            <img id="hits-image" src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80alt="project
+          <div  id ="hits-image"> 
+            <a href= "https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M">  <img id="hits-image" src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80alt="project
             />
           </div> 
 
           <p>Some text..</p>
           
         </div>
-        <div class="column" style="background-color: rgb(0, 0, 0);">
+        <div id="hot-country" class="column" style="background-color: rgb(0, 0, 0);">
           <h2>Hot Country</h2>
 
           <div  id ="country-image">        
-            <img id="country-image" src="https://images.unsplash.com/photo-1421217336522-861978fdf33a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80 alt="project
-            />
+            <a href= "https://open.spotify.com/embed/playlist/37i9dQZF1DX1lVhptIYRda"><img id="country-image" src="https://images.unsplash.com/photo-1421217336522-861978fdf33a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80 alt="project
+            /></a>
           </div> 
 
           <p>Some text..</p>
         </div>
-        <div class="column" style="background-color: rgb(0, 0, 0);">
-          <h2>Today' Top Hits<section></section></h2>
+        <div id="todays-top-hits" class="column" style="background-color: rgb(0, 0, 0);">
+          <h2>Today's Top Hits</h2>
 
           <div  id ="top-image">        
-            <img id="top-image" src="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80 alt="project
-            />
+            <a href= "https://open.spotify.com/embed/playlist/37i9dQZF1DX0kbJZpiYdZl"><img id="top-image" src="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80 alt="project
+            /></a>
           </div> 
 
           <p>Some text..</p>
+          <!-- linked the music to the pictures -->
+          <!-- <div class="hot-hits-USA">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0kbJZpiYdZl" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+          <div  class="hot-country">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1lVhptIYRda" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+          <div class="todays-top-hits">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div> -->
 
           <br>
           <br>
